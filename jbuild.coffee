@@ -2,6 +2,8 @@
 
 pkg = require("./package.json")
 
+preReqFile = "../ragents-test/tmp/pre-reqs-updated.txt"
+
 #-------------------------------------------------------------------------------
 tasks = defineTasks exports,
   watch:  "watch for source file changes, restart server"
@@ -32,6 +34,7 @@ tasks.serve = ->
 
 #-------------------------------------------------------------------------------
 watchIter = ->
+  "".to preReqFile
   tasks.serve()
 
 #-------------------------------------------------------------------------------
