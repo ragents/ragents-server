@@ -1,24 +1,24 @@
 {
-    "name":               "ragents-server",
-    "version":            "0.1.0",
-    "description":        "ragents server library",
-    "author":             "pmuellr",
-    "main":               "lib/ragents-server",
-    "scripts": {
-      "jbuild":           "jbuild",
-      "watch":            "jbuild watch"
-    },
-    "homepage":           "https://github.com/ragents/ragents-server",
-    "license":            "Apache-2.0",
-    "repository": {
-      "type":             "git",
-      "url" :             "https://github.com/ragents/ragents-server.git"
-    },
-    "dependencies": {
-        "underscore":     "1.7.x",
-        "websocket":      "1.0.x"
-    },
-    "devDependencies": {
-        "jbuild":         "1.0.x"
-    }
+  "name":               "ragents-server",
+  "version":            "0.1.0",
+  "description":        "ragents server library",
+  "author":             "pmuellr",
+  "main":               "lib/ragents-server",
+  "scripts": {
+    "jbuild":           "jbuild",
+    "watch":            "jbuild watch"
+  },
+  "homepage":           "https://github.com/ragents/ragents-server",
+  "license":            "Apache-2.0",
+  "repository": {
+    "type":             "git",
+    "url" :             "https://github.com/ragents/ragents-server.git"
+  },
+  "dependencies": {
+    "underscore":       "1.7.x",
+    "websocket":        "1.0.x"
+  },
+  "devDependencies": {
+    "jbuild":           "1.0.x"
+  }
 }
