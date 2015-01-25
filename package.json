@@ -19,6 +19,7 @@
     "websocket":        "1.0.x"
   },
   "devDependencies": {
-    "jbuild":           "1.0.x"
+    "jbuild":           "1.0.x",
+    "jshint":           "2.5.x"
   }
 }

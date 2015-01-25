@@ -34,6 +34,9 @@ tasks.serve = ->
 
 #-------------------------------------------------------------------------------
 watchIter = ->
+  log "linting ..."
+  jshint "lib/*.js"
+
   "".to preReqFile
   tasks.serve()
 
