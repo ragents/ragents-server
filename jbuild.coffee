@@ -1,6 +1,8 @@
 # Licensed under the Apache License. See footer for details.
 
-pkg = require("./package.json")
+path = require "path"
+
+pkg = require "./package.json"
 
 preReqFile = "../ragents-test/tmp/pre-reqs-updated.txt"
 
@@ -34,6 +36,8 @@ tasks.serve = ->
 
 #-------------------------------------------------------------------------------
 watchIter = ->
+  log "in #{path.relative "../..", __dirname}"
+
   log "linting ..."
   jshint "lib/*.js"
 
