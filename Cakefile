@@ -1,38 +1,38 @@
 # Licensed under the Apache License. See footer for details.
 
-path = require "path"
-
-pkg = require "./package.json"
+require "cakex"
 
 preReqFile = "../ragents-test/tmp/pre-reqs-updated.txt"
 
 #-------------------------------------------------------------------------------
-tasks = defineTasks exports,
-  watch:  "watch for source file changes, restart server"
-  server: "start server"
+task "watch", "watch for source file changes, restart server", -> taskWatch()
+task "serve", "start server",                                  -> taskServe()
 
-WatchSpec = "lib lib/**/*"
+WatchSpec = "lib/**/*"
 
 #-------------------------------------------------------------------------------
 mkdir "-p", "tmp"
 
 #-------------------------------------------------------------------------------
-tasks.watch = ->
+taskWatch = ->
   watchIter()
 
   watch
     files: WatchSpec.split " "
     run:   watchIter
 
-  watchFiles "jbuild.coffee" :->
-    log "jbuild file changed; exiting"
-    process.exit 0
+  watch
+    files: "Cakefile"
+    run: (file) ->
+      return unless file == "Cakefile"
+      log "Cakefile changed, exiting"
+      exit 0
 
 #-------------------------------------------------------------------------------
-tasks.serve = ->
+taskServe = ->
   log "restarting server at #{new Date()}"
 
-  server.start "tmp/server.pid", "node", ["../ragentsd/lib/ragentsd"]
+  daemon.start "server", "node", ["../ragentsd/lib/ragentsd"]
 
 #-------------------------------------------------------------------------------
 watchIter = ->
@@ -42,7 +42,7 @@ watchIter = ->
   jshint "lib/*.js"
 
   "".to preReqFile
-  tasks.serve()
+  taskServe()
 
 #-------------------------------------------------------------------------------
 cleanDir = (dir) ->

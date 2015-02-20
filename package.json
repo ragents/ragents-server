@@ -5,8 +5,8 @@
   "author":             "pmuellr",
   "main":               "lib/ragents-server",
   "scripts": {
-    "jbuild":           "jbuild",
-    "watch":            "jbuild watch"
+    "cake":             "cake",
+    "watch":            "cake watch"
   },
   "homepage":           "https://github.com/ragents/ragents-server",
   "license":            "Apache-2.0",
@@ -19,7 +19,8 @@
     "websocket":        "1.0.x"
   },
   "devDependencies": {
-    "jbuild":           "1.0.x",
+    "cakex":            "0.1.x",
+    "coffee-script":    "1.9.x",
     "jshint":           "2.5.x"
   }
 }
