@@ -4,9 +4,13 @@
   "description":        "ragents server library",
   "author":             "pmuellr",
   "main":               "lib/ragents-server",
+  "bin": {
+    "ragentsd":         "lib/ragentsd.js"
+  },
   "scripts": {
     "cake":             "cake",
-    "watch":            "cake watch"
+    "watch":            "cake watch",
+    "server":           "lib/ragentsd.js"
   },
   "homepage":           "https://github.com/ragents/ragents-server",
   "license":            "Apache-2.0",
@@ -16,6 +20,8 @@
   },
   "dependencies": {
     "debug":            "2.1.x",
+    "nopt":             "3.0.x",
+    "ports":            "1.1.x",
     "underscore":       "1.7.x",
     "websocket":        "1.0.x"
   },

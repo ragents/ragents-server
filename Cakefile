@@ -32,7 +32,7 @@ taskWatch = ->
 taskServe = ->
   log "restarting server at #{new Date()}"
 
-  daemon.start "server", "node", ["../ragentsd/lib/ragentsd"]
+  daemon.start "server", "node", ["lib/ragentsd"]
 
 #-------------------------------------------------------------------------------
 watchIter = ->

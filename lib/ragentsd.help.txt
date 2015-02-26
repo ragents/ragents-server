@@ -1,0 +1,23 @@
+%COMMAND% - %DESCRIPTION%
+
+This runs a basic ragents server.
+
+usage:
+
+    %COMMAND% [options]
+
+options:
+
+    -p --port [PORT]          specify http PORT port to use
+    -v --verbose              display verbose messages
+    -h --help                 print this help
+
+You can also set the PORT via the environment variable `PORT`.  The
+command-line option overrides the environment variable.
+
+If a port is not specified, one will be chose with the `ports` package.
+
+about:
+
+homepage: %HOMEPAGE%
+version:  %VERSION%
