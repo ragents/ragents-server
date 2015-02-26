@@ -15,6 +15,7 @@
     "url" :             "https://github.com/ragents/ragents-server.git"
   },
   "dependencies": {
+    "debug":            "2.1.x",
     "underscore":       "1.7.x",
     "websocket":        "1.0.x"
   },
