@@ -3,14 +3,14 @@
   "version":            "0.1.0",
   "description":        "ragents server library",
   "author":             "pmuellr",
-  "main":               "lib/ragents-server",
+  "main":               "./lib/ragents-server",
   "bin": {
-    "ragentsd":         "lib/ragentsd.js"
+    "ragentsd":         "./lib/ragentsd.js"
   },
   "scripts": {
     "cake":             "cake",
     "watch":            "cake watch",
-    "server":           "lib/ragentsd.js"
+    "server":           "./lib/ragentsd.js"
   },
   "homepage":           "https://github.com/ragents/ragents-server",
   "license":            "Apache-2.0",

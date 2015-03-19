@@ -1,11 +1,47 @@
 ragents-server - ragents server library
 ================================================================================
 
+A library that implements the server end of the `ragents` protocol, and a
+simple standalone server which uses it, named `ragentsd`
 
 
 
-using ragents-server
+using the standalone server `ragentsd`
 ================================================================================
+
+After `npm install`ing this module, a binary named `ragentsd` is installed.  To
+display help, use:
+
+    ragentsd --help
+
+The server only handles WebSocket traffic speaking the `ragents` protocol - all
+other requests are handled in an undefined way.
+
+
+
+using the `ragents-server` package
+================================================================================
+
+The package exports a single function:
+
+### `createServer(config)`
+
+The `config` object must have a property `httpServer`, which is an `http`
+server object (from the `http` package).  The function returns an instance
+of a `RagentsServer` object.
+
+### `RagentsServer` object
+
+A `RagentsServer` object has two methods:
+
+### `ragentsServer.start()`
+
+Will start accepting WebSocket connections from the http server
+
+### `ragentsServer.stop()`
+
+Will stop accepting WebSocket connections from the http server, and
+close all the connections to sessions created on this server.
 
 
 
@@ -13,18 +49,17 @@ using ragents-server
 hacking
 ================================================================================
 
-This project uses [jbuild](https://www.npmjs.com/package/jbuild) as it's
+This project uses [cake](http://coffeescript.org/#cake) as it's
 build tool.  To rebuild the project continuously, use the command
 
     npm run watch
 
-Other `jbuild` commands are available (assuming you are using npm v2) with
+Other `cake` commands are available (assuming you are using npm v2) with
 the command
 
-    npm run jbuild -- <command here>
+    npm run cake -- <command here>
 
-Run `npm run jbuild` to see the other commands available in the `jbuild.coffee`
-file.
+Run `npm run cake` to see the other commands available in the `Cakefile`.
 
 
 
