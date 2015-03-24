@@ -1,6 +1,6 @@
 {
   "name":               "ragents-server",
-  "version":            "0.1.0",
+  "version":            "1.0.0",
   "description":        "ragents server library",
   "author":             "pmuellr",
   "main":               "./lib/ragents-server",
