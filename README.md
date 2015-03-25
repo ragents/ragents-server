@@ -9,8 +9,8 @@ simple standalone server which uses it, named `ragentsd`
 using the standalone server `ragentsd`
 ================================================================================
 
-After `npm install`ing this module, a binary named `ragentsd` is installed.  To
-display help, use:
+After [`npm install`](https://www.npmjs.com/package/ragents-server)ing this
+module, a binary named `ragentsd` is installed.  To display help, use:
 
     ragentsd --help
 
@@ -28,6 +28,7 @@ clicking the "Deploy to Bluemix" button below:
 <a target="_blank" href="https://bluemix.net/deploy?repository=https://github.com/ragents/ragents-server.git">
   <img src="http://bluemix.net/deploy/button.png" alt="Deploy to Bluemix">
 </a>
+<!-- __ those two underscores are needed to fix atom hilighting - grumble -->
 
 
 
