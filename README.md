@@ -19,6 +19,18 @@ other requests are handled in an undefined way.
 
 
 
+deploy on Bluemix
+================================================================================
+
+You can deploy `ragentsd` on the [IBM Bluemix PaaS](https://bluemix.net) by
+clicking the "Deploy to Bluemix" button below:
+
+<a target="_blank" href="https://bluemix.net/deploy?repository=https://github.com/ragents/ragents-server.git">
+  <img src="http://bluemix.net/deploy/button.png" alt="Deploy to Bluemix">
+</a>
+
+
+
 using the `ragents-server` package
 ================================================================================
 

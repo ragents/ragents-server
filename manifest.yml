@@ -1,0 +1,6 @@
+---
+applications:
+- name:    ragentsd
+  memory:  256M
+  host:    ragentsd-${random-word}
+  command: node lib/ragentsd.js
